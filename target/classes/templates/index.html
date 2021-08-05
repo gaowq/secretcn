@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<div>
+    <textarea id="wards" style=" margin: 20px; width: 90%; height: 90%;" rows="15"></textarea>
+    <a id="aaa" style="margin-left: 20px;" href="#" class="easyui-linkbutton">加密/解密</a>
+</div>
+<a id="bbb" style="margin-left: 20px;" href="#" class="easyui-linkbutton">复制</a>
+<body>
+
+</body>
+</html>
+<script src="/jquery-easyui-1.8.8/jquery.min.js"></script>
+<link rel="stylesheet" href="/jquery-easyui-1.8.8/themes/default/easyui.css">
+<link rel="stylesheet" href="/jquery-easyui-1.8.8/themes/icon.css">
+<script src="/jquery-easyui-1.8.8/jquery.easyui.min.js"></script>
+<script src="/jquery-easyui-1.8.8/locale/easyui-lang-zh_CN.js"></script>
+
+<script type="text/javascript" th:inline="none">
+    $(function () {
+
+        $('#aaa').click(function () {
+            translate();
+        });
+
+        $('#bbb').click(function () {
+            copy();
+            myShow("复制成功！");
+        });
+
+        function translate() {
+            $.post('/getTranslate', {tranStr: $('#wards').val()}, function (data) {
+                if (data.status > 0) {
+                    $('#wards').val(data.msg);
+                }
+            });
+        }
+
+        function copy(){
+            var num = document.getElementById('wards');
+            num.select();//选中对象
+            document.execCommand("Copy");//执行复制
+        }
+
+        function myShow(msg) {
+            $.messager.show({
+                title: '提示',
+                msg: msg,
+                timeout: 2000,
+                showType: 'slide'
+            });
+        }
+    });
+</script>

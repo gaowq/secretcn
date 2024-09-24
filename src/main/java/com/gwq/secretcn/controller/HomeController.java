@@ -18,6 +18,12 @@ public class HomeController {
         return "index";
     }
 
+    @GetMapping("/b")
+    public String b(HttpServletRequest request) {
+        request.setAttribute("key", "游客");
+        return "b";
+    }
+
     @ResponseBody
     @PostMapping("/getTranslate")
     public Map getTranslate(String tranStr) {

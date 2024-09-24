@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+
+<div>
+  <textarea id="wards" style=" margin: 20px; width: 90%; height: 90%;" rows="15"></textarea>
+  <a id="aaa" style="margin-left: 20px;" href="#" class="easyui-linkbutton">加密/解密</a>
+</div>
+<a id="bbb" style="margin-left: 20px;" href="#" class="easyui-linkbutton">复制</a>
+<body>
+
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://www.jeasyui.com/easyui/themes/default/easyui.css">
+<link rel="stylesheet" href="https://www.jeasyui.com/easyui/themes/icon.css">
+<script src="https://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+<script src="https://www.jeasyui.com/easyui/locale/easyui-lang-zh_CN.js"></script>
+
+<script type="text/javascript" th:inline="none">
+  $(function () {
+
+    $('#aaa').click(function () {
+      translate();
+    });
+
+    $('#bbb').click(function () {
+      copy();
+      myShow("复制成功！");
+    });
+
+    function translate() {
+      var input = $('#wards').val()
+      if(input.length>0) {
+        let result = '';
+
+        for (let i=0;i<input.length;i++)
+        {
+          let unicode=input.charCodeAt(i)
+
+
+          if (unicode < 19968 || unicode > 40943) {
+            result += input[i];
+          }else{
+            let y = (unicode - 19968 + 10488) % 20976 + 19968;
+            result += String.fromCharCode(y);
+          }
+        }
+
+        $('#wards').val(result);
+      }
+    }
+
+    function copy(){
+      var num = document.getElementById('wards');
+      num.select();//选中对象
+      document.execCommand("Copy");//执行复制
+    }
+
+    function myShow(msg) {
+      $.messager.show({
+        title: '提示',
+        msg: msg,
+        timeout: 2000,
+        showType: 'slide'
+      });
+    }
+  });
+</script>

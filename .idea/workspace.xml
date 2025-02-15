@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb4e8c30-0b59-4280-a89a-64e893147fa4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/b.html" afterDir="false" />
+    <list default="true" id="cb4e8c30-0b59-4280-a89a-64e893147fa4" name="Default Changelist" comment="add no post page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gwq/secretcn/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gwq/secretcn/controller/HomeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "gaowq"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/gaowq/secretcn",
+    "accountId": "78739ce4-7648-4d15-aff2-51754121fd42"
+  }
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -101,11 +111,24 @@
       <option name="presentableId" value="Default" />
       <updated>1628087829120</updated>
       <workItem from="1628087830556" duration="8220000" />
-      <workItem from="1727166347631" duration="3073000" />
+      <workItem from="1727166347631" duration="8949000" />
     </task>
+    <task id="LOCAL-00001" summary="add no post page">
+      <option name="closed" value="true" />
+      <created>1727169524649</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727169524649</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add no post page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add no post page" />
   </component>
 </project>
